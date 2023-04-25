@@ -53,7 +53,10 @@ $secondary-color: #1c3144;
 .form-group label {
   width: 100%;
   display: block;
-  height: 25px;
+
+  &:not(.ff-item-qs.ff-qs-html) {
+    height: 25px;
+  }
 }
 
 input.form-control {
@@ -90,6 +93,18 @@ h3.ff-title {
 
   &:last-child {
     text-align: right;
+  }
+}
+
+// Use media queries like this:
+@include media-query($on-palm) {
+  .footer-col {
+    width: 100%;
+    text-align: center;
+
+    &:last-child {
+      text-align: center;
+    }
   }
 }
 
