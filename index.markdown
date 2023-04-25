@@ -5,4 +5,15 @@
 layout: home
 ---
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdcKeZIbOJuZTgpSj6CeQk57oRvKa5RaFFMyHyVtvepbN4PWA/viewform?embedded=true" width="640" height="591" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<div class="hero">
+ <img src="/assets/images/hero.jpg" alt="Veggies at Market" />
+</div>
+
+<style>
+  .ff-form .ff-powered-img {
+    display: none !important;
+  }
+</style>
+
+<div id="ff-compose"></div>
+<script async defer src="https://formfacade.com/include/104481678246547840246/form/1FAIpQLSdcKeZIbOJuZTgpSj6CeQk57oRvKa5RaFFMyHyVtvepbN4PWA/clean.js?div=ff-compose"></script>

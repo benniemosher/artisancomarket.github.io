@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$base-font-size: 16px !default;
+$base-font-weight: 400 !default;
+$small-font-size: $base-font-size * 0.875 !default;
+$base-line-height: 1.5 !default;
+
+$spacing-unit: 30px !default;
+
+$text-color: #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color: #2a7ae2 !default;
+
+$grey-color: #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color-dark: darken($grey-color, 25%) !default;
+
+$table-text-align: left !default;
+
+// Width of the content area
+$content-width: 800px !default;
+
+$on-palm: 600px !default;
+$on-laptop: 800px !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import partials.
+@import 'minima/base', 'minima/layout', 'minima/syntax-highlighting';
+
+$base-color: #aabd8c;
+$secondary-color: #1c3144;
+
+.form-group label {
+  width: 100%;
+  display: block;
+  height: 25px;
+}
+
+input.form-control {
+  width: 100%;
+  display: block;
+  height: 50px;
+}
+
+button.ff-submit {
+  background-color: $base-color;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font-size: 14px;
+  line-height: 23px;
+}
+
+.ff-form button span {
+  font-size: 16px !important;
+}
+
+h3.ff-title {
+  display: none;
+}
+
+.ff-banner-image {
+  display: none !important;
+}
+
+.footer-col {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
+.hero img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+  object-position: 0 70%;
+  border-radius: 3px;
+  display: block;
+}
+
+.form-group .ff-form-check {
+  input {
+    display: inline-block;
+    width: 30px;
+    margin: 0;
+  }
+
+  label {
+    width: calc(100% - 40px);
+    font-size: 15px;
+  }
+}
+
+.form-group#ff-id-597130691 .ff-form-check,
+.form-group#ff-id-203355610 .ff-form-check {
+  width: 100%;
+}
+
+.ff-form .ff-check-table {
+  .ff-form-check {
+    display: inline-block;
+    width: calc(50% - 10px);
+  }
+}
+
+input[type='text'],
+textarea {
+  padding: 1rem;
+  box-sizing: border-box;
+  font-size: 18px;
+  border-radius: 3px;
+  border: 0;
+  border: 1px solid $grey-color;
+
+  &:focus,
+  &:focus-visible {
+    outline-color: $base-color;
+  }
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  line-height: 1.1;
+  font-family: $base-font-family;
+}
