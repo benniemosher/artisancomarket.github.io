@@ -163,3 +163,11 @@ textarea {
   line-height: 1.1;
   font-family: $base-font-family;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  align-content: center;
+}
