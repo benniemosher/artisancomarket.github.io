@@ -1,9 +1,12 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+$base-font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
   'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol' !default;
+$serif-font-family: 'Noto Serif', serif;
 $base-font-size: 16px !default;
 $base-font-weight: 400 !default;
 $small-font-size: $base-font-size * 0.875 !default;
@@ -13,11 +16,13 @@ $spacing-unit: 30px !default;
 
 $text-color: #111 !default;
 $background-color: #fdfdfd !default;
-$brand-color: #2a7ae2 !default;
+$brand-color: #4a3931 !default;
 
-$grey-color: #828282 !default;
-$grey-color-light: lighten($grey-color, 40%) !default;
+$grey-color: #dccca3 !default;
+$grey-color-light: lighten($grey-color, 15%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
+
+$mint: #90aa86 !default;
 
 $table-text-align: left !default;
 
@@ -49,6 +54,63 @@ $on-laptop: 800px !default;
 
 $base-color: #aabd8c;
 $secondary-color: #1c3144;
+
+header,
+footer {
+  padding: 2rem 0;
+
+  &.site-header {
+    background-color: $brand-color;
+    border: 0;
+    min-height: auto;
+    color: #fff;
+
+    .wrapper {
+      padding: 0;
+      max-width: 800px;
+
+      @include media-query($on-palm) {
+        padding: 0 1rem;
+      }
+    }
+  }
+
+  &.site-footer {
+    padding: 1rem;
+    border-top: 1px solid $brand-color;
+    color: $brand-color;
+  }
+
+  .footer-col-wrapper {
+    color: $brand-color;
+    font-size: 0.7rem;
+  }
+
+  .site-nav {
+    line-height: 150px;
+
+    a.page-link {
+      display: inline-block;
+      color: #fff;
+      font-family: $serif-font-family;
+      font-size: 1.2rem;
+
+      &:hover {
+        color: $grey-color;
+        text-decoration: none;
+      }
+    }
+  }
+
+  a {
+    color: $brand-color;
+
+    &:hover {
+      color: $grey-color;
+      text-decoration: none;
+    }
+  }
+}
 
 .form-group label {
   width: 100%;
@@ -170,4 +232,41 @@ textarea {
   align-items: center;
   margin-bottom: 2rem;
   align-content: center;
+
+  @include media-query($on-palm) {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+
+    iframe {
+      width: 300px;
+    }
+  }
+}
+
+#ff-compose {
+  form {
+    padding: 0;
+  }
+
+  .ff-powered-img {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+a.button {
+  display: block;
+  background-color: $mint;
+  border-radius: 0.7rem;
+  line-height: 2.5rem;
+  color: #fff;
+  padding: 0 1rem;
+  margin-top: 1rem;
+
+  &:hover {
+    background-color: lighten($mint, 10%);
+    color: #fff;
+    text-decoration: none;
+  }
 }
