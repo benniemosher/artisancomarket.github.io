@@ -112,6 +112,26 @@ footer {
   }
 }
 
+@include media-query($on-palm) {
+  header .site-nav {
+    background-color: $brand-color;
+    line-height: 50px !important;
+
+    .page-link {
+      height: 50px;
+      line-height: 50px !important;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+
+      &:first-child {
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+}
+
 .form-group label {
   width: 100%;
   display: block;
