@@ -62,8 +62,8 @@ footer {
   &.site-header {
     background-color: $brand-color;
     border: 0;
-    min-height: auto;
     color: #fff;
+    min-height: auto;
 
     .wrapper {
       padding: 0;
@@ -76,9 +76,9 @@ footer {
   }
 
   &.site-footer {
-    padding: 1rem;
     border-top: 1px solid $brand-color;
     color: $brand-color;
+    padding: 1rem;
   }
 
   .footer-col-wrapper {
@@ -90,8 +90,8 @@ footer {
     line-height: 150px;
 
     a.page-link {
-      display: inline-block;
       color: #fff;
+      display: inline-block;
       font-family: $serif-font-family;
       font-size: 1.2rem;
 
@@ -133,8 +133,8 @@ footer {
 }
 
 .form-group label {
-  width: 100%;
   display: block;
+  width: 100%;
 
   &:not(.ff-item-qs.ff-qs-html) {
     height: 25px;
@@ -142,15 +142,15 @@ footer {
 }
 
 input.form-control {
-  width: 100%;
   display: block;
   height: 50px;
+  width: 100%;
 }
 
 button.ff-submit {
   background-color: $base-color;
-  border: 0;
   border-radius: 3px;
+  border: 0;
   color: white;
   font-size: 14px;
   line-height: 23px;
@@ -169,9 +169,9 @@ h3.ff-title {
 }
 
 .footer-col {
-  width: 50%;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  width: 50%;
 
   &:last-child {
     text-align: right;
@@ -181,8 +181,8 @@ h3.ff-title {
 // Use media queries like this:
 @include media-query($on-palm) {
   .footer-col {
-    width: 100%;
     text-align: center;
+    width: 100%;
 
     &:last-child {
       text-align: center;
@@ -191,24 +191,25 @@ h3.ff-title {
 }
 
 .hero img {
-  object-fit: cover;
-  height: 300px;
-  width: 100%;
-  object-position: 0 70%;
   border-radius: 3px;
   display: block;
+  height: 300px;
+  object-fit: cover;
+  object-position: 0 70%;
+  object-position: 50% 50%;
+  width: 100%;
 }
 
 .form-group .ff-form-check {
   input {
     display: inline-block;
-    width: 30px;
     margin: 0;
+    width: 30px;
   }
 
   label {
-    width: calc(100% - 40px);
     font-size: 15px;
+    width: calc(100% - 40px);
   }
 }
 
@@ -226,12 +227,12 @@ h3.ff-title {
 
 input[type='text'],
 textarea {
-  padding: 1rem;
-  box-sizing: border-box;
-  font-size: 18px;
   border-radius: 3px;
   border: 0;
   border: 1px solid $grey-color;
+  box-sizing: border-box;
+  font-size: 18px;
+  padding: 1rem;
 
   &:focus,
   &:focus-visible {
@@ -247,11 +248,11 @@ textarea {
 }
 
 .row {
+  align-content: center;
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 2rem;
-  align-content: center;
 
   @include media-query($on-palm) {
     flex-wrap: wrap;
@@ -276,13 +277,13 @@ textarea {
 }
 
 a.button {
-  display: block;
   background-color: $mint;
   border-radius: 0.7rem;
-  line-height: 2.5rem;
   color: #fff;
-  padding: 0 1rem;
+  display: block;
+  line-height: 2.5rem;
   margin-top: 1rem;
+  padding: 0 1rem;
 
   &:hover {
     background-color: lighten($mint, 10%);
